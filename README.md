@@ -1,4 +1,23 @@
 # ORB-SLAM3
+## Changes for M1 Mac
+
+simmelar to https://github.com/amaiyazinggg/orbslam3_ros_mac
+
+- Changed -march=native to -mcpu=apple-m1 in CMakeLists.txt
+- Removed tr1/ from everywhere include since i is included in C++11
+- Removed ::tr1 from everywhere since i is included in C++11
+- Changed stdint-gcc.h to stdint.h since I am using clang and not gcc
+- Added build_clean.sh
+- Find and Inlcude Boost and OpenSSL in CMakeLists.txt
+
+Manually install
+```
+brew install openssl
+brew install boost
+```
+
+
+
 
 ### V1.0, December 22th, 2021
 **Authors:** Carlos Campos, Richard Elvira, Juan J. Gómez Rodríguez, [José M. M. Montiel](http://webdiis.unizar.es/~josemari/), [Juan D. Tardos](http://webdiis.unizar.es/~jdtardos/).
